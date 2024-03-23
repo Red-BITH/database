@@ -100,6 +100,7 @@ def create_window():
 
     def launch_program():
         os.system("python system/launch.py")
+        root.destroy()
 
     # Butonu oluştur
     button_launch = tk.Button(root, text="Launch", font=("Helvetica", 16, "bold"), command=launch_program)
