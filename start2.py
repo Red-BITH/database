@@ -109,7 +109,7 @@ def create_window():
     label2.grid(row=0, column=2, padx=10, pady=10)
 
     def launch_program():
-        os.system("python start.py")
+        os.system("python system/launch.py")
 
     # Butonu oluştur
     button_launch = tk.Button(root, text="Launch", font=("Helvetica", 16, "bold"), command=launch_program)
