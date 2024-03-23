@@ -1,5 +1,16 @@
 import tkinter as tk
 from PIL import Image, ImageTk
+import subprocess
+import os
+
+def launch_sms_bomb():
+    os.system('qterminal -e "python system/sms.py"')
+
+def launch_spider_gather():
+    os.system('qterminal -e "python system/sgather.py"')
+
+def launch_list_network():
+    os.system('qterminal -e "python system/lnet.py"')
 
 # Ana pencere oluştur
 root = tk.Tk()
@@ -40,11 +51,23 @@ label2 = tk.Label(root, image=photo2, bg="white")
 label2.grid(row=0, column=2, padx=(10, 50), pady=10)  # Sağ boşluk ayarlandı
 
 # Butonların arasındaki mesafeyi ve uzunluğunu ayarla
-button_width = 10  # Uzunluk azaltıldı
+button_width = 13  # Uzunluk azaltıldı
 button_padx = 10    # Aralık azaltıldı
 for i in range(9):  # Toplam 9 buton ekledim, 3 satırda 3'er buton
     button = tk.Button(root, text=f"Button {i+1}", font=("Helvetica", 12), bg="red", width=button_width)
     button.grid(row=i // 3 + 1, column=i % 3, padx=button_padx, pady=5)
+
+# Button 1 (SmsBomb)
+button_1 = tk.Button(root, text="SmsBomb", font=("Helvetica", 13), bg="red", width=button_width, command=launch_sms_bomb)
+button_1.grid(row=1, column=0, padx=button_padx, pady=5)
+
+# Button 2 (Spider Gather)
+button_2 = tk.Button(root, text="Spider Gather", font=("Helvetica", 13), bg="red", width=button_width, command=launch_spider_gather)
+button_2.grid(row=1, column=1, padx=button_padx, pady=5)
+
+# Button 3 (List Network)
+button_3 = tk.Button(root, text="List Network", font=("Helvetica", 13), bg="red", width=button_width, command=launch_list_network)
+button_3.grid(row=1, column=2, padx=button_padx, pady=5)
 
 # Exit butonu
 exit_button = tk.Button(root, text="Exit", font=("Helvetica", 12, "bold"), bg="orange", fg="black", command=root.destroy)
