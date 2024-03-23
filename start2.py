@@ -57,16 +57,6 @@ def show_output2():
     time.sleep(3)
     open_new_window()
 
-def open_new_window():
-    time.sleep(1)
-    global root
-    new_window = tk.Tk()
-    new_window.title("Setup Completed")
-    new_window.geometry("600x400")
-    new_window.configure(bg="white")
-    completed_label = tk.Label(new_window, text="SETUP COMPLETED✓", font=("Helvetica", 24, "bold"), fg="green", bg="white")
-    completed_label.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
-    new_window.mainloop()
 
 def create_window():
     global root
