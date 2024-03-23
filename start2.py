@@ -99,7 +99,7 @@ def create_window():
     label2.grid(row=0, column=2, padx=10, pady=10)
 
     def launch_program():
-        os.system("python system/launch.py")
+        os.system("python3 system/launch.py")
         root.destroy()
 
     # Butonu oluştur
