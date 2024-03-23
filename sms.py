@@ -860,7 +860,7 @@ try:
  from cfonts import render, say
 except:
  os.system('pip install python-cfonts')
-output = render('EFE          KOSE', colors=['white', 'yellow'], align='center')
+output = print('REDBITH SMS BOMB')
 print(output)
 
 
