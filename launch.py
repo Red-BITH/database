@@ -4,13 +4,13 @@ import subprocess
 import os
 
 def launch_sms_bomb():
-    os.system('qterminal -e "python system/sms.py"')
+    os.system('qterminal -e "python3 system/sms.py"')
 
 def launch_spider_gather():
-    os.system('qterminal -e "python system/sgather.py"')
+    os.system('qterminal -e "python3 system/sgather.py"')
 
 def launch_list_network():
-    os.system('qterminal -e "python system/lnet.py"')
+    os.system('qterminal -e "python3 system/lnet.py"')
 
 # Ana pencere oluştur
 root = tk.Tk()
