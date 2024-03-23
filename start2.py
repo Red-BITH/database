@@ -6,26 +6,7 @@ import time
 def install_libraries():
     os.system("pip install requests")
     os.system("pip install subprocess")
-    os.system("pip install bs4")
-    sil()  # start.py dosyasını indirme fonksiyonunu çağır
-
-def sil():
-    import requests
-    # Önce mevcut start.sh dosyasını sil
-    os.system('rm -rf start.sh')
-
-    # İndirilecek dosyanın URL'si
-    url = 'https://raw.githubusercontent.com/Red-BITH/database/main/start.py'
-
-    # Dosyayı indir
-    response = requests.get(url)
-    if response.status_code == 200:
-        os.system("sudo rm -rf start.sh")
-        os.system("wget https://raw.githubusercontent.com/Red-BITH/database/main/start.py")
-        os.system("chmod +x start.py")
-        print("\033[0;32mstart.py file succesfuly installed.")
-    else:
-        print("\033[0;31mSOMETHING WENT WRONG!!!")
+    os.system("pip install bs4")# start.py dosyasını indirme fonksiyonunu çağır
 
 def create_request_files():
     current_directory = os.getcwd()
