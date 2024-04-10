@@ -74,10 +74,10 @@ button_3 = tk.Button(root, text="List Network", font=("Helvetica", 13), bg="red"
 button_3.grid(row=1, column=2, padx=button_padx, pady=5)
 
 button_4 = tk.Button(root, text="Mac Change", font=("Helvetica", 13), bg="red", width=button_width, command=launch_mac)
-button_4.grid(row=1, column=2, padx=button_padx, pady=5)
+button_4.grid(row=2, column=0, padx=button_padx, pady=5)
 
 button_5 = tk.Button(root, text="IP(check)", font=("Helvetica", 13), bg="red", width=button_width, command=launch_chk)
-button_5.grid(row=1, column=2, padx=button_padx, pady=5)
+button_5.grid(row=2, column=1, padx=button_padx, pady=5)
 
 # Exit butonu
 exit_button = tk.Button(root, text="Exit", font=("Helvetica", 12, "bold"), bg="orange", fg="black", command=root.destroy)
