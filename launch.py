@@ -11,6 +11,10 @@ def launch_spider_gather():
 
 def launch_list_network():
     os.system('qterminal -e "python3 system/lnet.py"')
+def launch_mac():
+    os.system('qterminal -e "python3 system/mac.py"')
+def launch_chk():
+    os.system('qterminal -e "python3 system/fdinfo.py"')
 
 # Ana pencere oluştur
 root = tk.Tk()
@@ -68,6 +72,12 @@ button_2.grid(row=1, column=1, padx=button_padx, pady=5)
 # Button 3 (List Network)
 button_3 = tk.Button(root, text="List Network", font=("Helvetica", 13), bg="red", width=button_width, command=launch_list_network)
 button_3.grid(row=1, column=2, padx=button_padx, pady=5)
+
+button_4 = tk.Button(root, text="Mac Change", font=("Helvetica", 13), bg="red", width=button_width, command=launch_mac)
+button_4.grid(row=1, column=2, padx=button_padx, pady=5)
+
+button_5 = tk.Button(root, text="IP(check)", font=("Helvetica", 13), bg="red", width=button_width, command=launch_chk)
+button_5.grid(row=1, column=2, padx=button_padx, pady=5)
 
 # Exit butonu
 exit_button = tk.Button(root, text="Exit", font=("Helvetica", 12, "bold"), bg="orange", fg="black", command=root.destroy)
