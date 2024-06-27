@@ -7,7 +7,7 @@ if u == "yes":
     print(" ")
 else:
     while True:
-        print("\033[1m"\033[0;37m ")
+        print("\033[1m\033[0;37m ")
         a = input("Username--->")
         b = input("Şifreniz--->")
 
