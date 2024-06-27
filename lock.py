@@ -9,7 +9,7 @@ else:
     while True:
         print("\033[1m\033[0;37m ")
         a = input("Username--->")
-        b = input("Şifreniz--->")
+        b = input("Password--->")
 
         with open(user_file_path, "r") as user_file:
             correct_username = user_file.read().strip()
